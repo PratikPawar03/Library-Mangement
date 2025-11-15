@@ -1,6 +1,8 @@
 package com.example.demo.service;
 
  
+import java.util.List;
+
 import com.example.demo.dto.LibraryDto;
 import com.example.demo.entity.Book;
 import com.example.demo.entity.Library;
@@ -8,8 +10,7 @@ import com.example.demo.entity.Library;
 public interface LibraryService {
 void addLibrary(LibraryDto libraryDto);
 Library getLibrary(int id);
-void addBook(Book book, int id);
-Book findByLocation(String location);
-Book findByEstablishedYear(int establishedYear);
+List<Library> findByLocation(String location);
+List<Library> findByEstablishedYear(int establishedYear);
 
 }

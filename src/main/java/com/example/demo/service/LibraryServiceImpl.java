@@ -44,21 +44,19 @@ public class LibraryServiceImpl implements LibraryService{
 	}
 
 	@Override
-	public void addBook(Book book, int id) {
+	public List<Library> findByLocation(String location) {
 		// TODO Auto-generated method stub
-		
+		return libraryRepository.findByLocation(location);
 	}
 
 	@Override
-	public Book findByLocation(String location) {
+	public List<Library> findByEstablishedYear(int establishedYear) {
 		// TODO Auto-generated method stub
-		return null;
+		return libraryRepository.findByEstablishedYear(establishedYear);
 	}
 
-	@Override
-	public Book findByEstablishedYear(int establishedYear) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
+	
 
-}
+}	
+	
